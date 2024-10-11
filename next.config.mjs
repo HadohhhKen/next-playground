@@ -6,16 +6,16 @@ const nextConfig = {
   basePath: repoPath,
   assetPrefix: repoPath,
   trailingSlash: true,
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'via.placeholder.com',
-        port: '',
-        pathname: '/**/*',
-      },
-    ],
-  },
+  //images: {
+  //remotePatterns: [
+  //  {
+  //    protocol: 'https',
+  //    hostname: 'via.placeholder.com',
+  //    port: '',
+  //    pathname: '/**/*',
+  //  },
+  //],
+  //},
   env: {
     basePath: repoPath,
   },
