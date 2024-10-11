@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+const basePath = process.env.basePath;
 
 export default function Home() {
   const [data, setData] = useState<any>([]);
@@ -65,12 +66,12 @@ export default function Home() {
             <ul className="flex gap-2">
               <li>
                 <a href="#">
-                  <Image src="/assets/images/common/icon-x.svg" alt="" width={40} height={40} />
+                  <Image src={`${basePath}/assets/images/common/icon-x.svg`} alt="" width={40} height={40} />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <Image src="/assets/images/common/icon-fb.svg" alt="" width={40} height={40} />
+                  <Image src={`${basePath}/assets/images/common/icon-fb.svg`} alt="" width={40} height={40} />
                 </a>
               </li>
             </ul>

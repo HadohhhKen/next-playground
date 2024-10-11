@@ -16,6 +16,9 @@ const nextConfig = {
       },
     ],
   },
+  env: {
+    basePath: repoPath,
+  },
 };
 
 export default nextConfig;
