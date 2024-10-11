@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function Home() {
   const [data, setData] = useState<any>([]);
@@ -30,24 +30,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="bg-slate-600">
-        <div className="flex justify-between items-center w-[95%] max-w-[1280px] mx-auto text-white">
-          <a className="header__logo" href="/">
-            Site Logo
-          </a>
-          <div className="header__menu">
-            <nav>
-              <ul>
-                <li>
-                  <Link className="block py-5" href="/sub/">
-                    Sub
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="w-[95%] max-w-[1000px] mx-auto py-10">
         <ul className="grid grid-cols-5 gap-5 min-h-[100vh]">
           {!loading &&
@@ -64,27 +47,7 @@ export default function Home() {
             ))}
         </ul>
       </main>
-      <footer className="bg-slate-600">
-        <div className="grid place-items-center gap-2 w-[95%] max-w-[1280px] mx-auto py-5 text-white">
-          <nav>
-            <ul className="flex gap-2">
-              <li>
-                <a href="#">
-                  <Image src="/assets/images/common/icon-x.svg" alt="" width={1} height={1} />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Image src="/assets/images/common/icon-fb.svg" alt="" width={1} height={1} />
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <p>
-            <small>©hoo bar baz...</small>
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
