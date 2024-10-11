@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-const relativePath = process.env.relativePath;
+const relativePath = process.env.basePath;
 
 const Header = () => {
   return (
