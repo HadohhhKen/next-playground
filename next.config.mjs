@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/next-playground' : '';
+
 const nextConfig = {
-  basePath: isProd ? '/next-playground' : '',
+  basePath,
+  assetPrefix: basePath,
   trailingSlash: true,
   images: {
     remotePatterns: [
