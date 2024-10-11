@@ -42,9 +42,8 @@ export default function Home() {
                   className="absolute top-0 left-0 w-[100%] h-[100%] object-contain"
                   src={item.download_url}
                   alt=""
-                  width={1}
-                  height={1}
-                  unoptimized
+                  width={500}
+                  height={500}
                 />
               </li>
             ))}
