@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://picsum.photos/v2/list?&limit=30');
+        const response = await fetch('https://picsum.photos/v2/list?&limit=10');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -35,7 +35,7 @@ export default function Home() {
     <>
       <Header />
       <main className="w-[95%] max-w-[1000px] mx-auto py-10">
-        <ul className="grid grid-cols-4 gap-6 min-h-[100vh]">
+        <ul className="grid grid-cols-2 gap-6 min-h-[100vh]">
           {data?.map((item: any) => (
             <li className="bg-slate-100 w-[100%] h-0 pt-[100%] relative" key={item.id}>
               <Image
