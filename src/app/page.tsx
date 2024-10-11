@@ -33,9 +33,9 @@ export default function Home() {
     <>
       <header className="bg-slate-600">
         <div className="flex justify-between items-center w-[95%] max-w-[1280px] mx-auto text-white">
-          <a className="header__logo" href="/">
+          <Link className="header__logo" href="/">
             Site Logo
-          </a>
+          </Link>
           <div className="header__menu">
             <nav>
               <ul>
