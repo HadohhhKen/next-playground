@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
-const repoPath = isProd ? '/next-playground' : '';
+const relativePath = isProd ? '' : '';
 
 const nextConfig = {
-  basePath: repoPath,
-  assetPrefix: repoPath,
+  basePath: relativePath,
+  assetPrefix: relativePath,
   trailingSlash: true,
   images: {
     remotePatterns: [
@@ -17,7 +17,7 @@ const nextConfig = {
     ],
   },
   env: {
-    basePath: repoPath,
+    basePath: relativePath,
   },
 };
 
