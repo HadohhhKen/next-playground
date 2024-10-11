@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_=${Date.now()}`);
+        const response = await fetch(`https://jsonplaceholder.typicode.com/albums/1/photos?_=${Date.now()}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -49,12 +49,17 @@ export default function Home() {
         </div>
       </header>
       <main className="w-[95%] max-w-[1000px] mx-auto py-10">
-        <ul className="grid grid-cols-3 gap-5 min-h-[100vh]">
+        <ul className="grid grid-cols-5 gap-5 min-h-[100vh]">
           {!loading &&
-            data?.slice(0, 11).map((item: any) => (
-              <li className="bg-slate-100 p-5 grid gap-1" key={item.id}>
-                <div className="font-semibold">{item.title}</div>
-                <div>{item.body}</div>
+            data?.map((item: any) => (
+              <li className="bg-slate-100 w-[100%] h-0 pt-[100%] relative" key={item.id}>
+                <img
+                  className="absolute top-0 left-0 w-[100%] h-[100%] object-contain"
+                  src={item.thumbnailUrl}
+                  alt=""
+                  width={150}
+                  height={150}
+                />
               </li>
             ))}
         </ul>
@@ -65,12 +70,12 @@ export default function Home() {
             <ul className="flex gap-2">
               <li>
                 <a href="#">
-                  <Image src="/assets/images/common/icon-x.svg" alt="" width={40} height={40} />
+                  <Image src="/assets/images/common/icon-x.svg" alt="" width={1} height={1} />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <Image src="/assets/images/common/icon-fb.svg" alt="" width={40} height={40} />
+                  <Image src="/assets/images/common/icon-fb.svg" alt="" width={1} height={1} />
                 </a>
               </li>
             </ul>
