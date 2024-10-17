@@ -1,7 +1,8 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-import Image from 'next/image';
+// https://next-export-optimize-images.vercel.app/docs/Features/remote-image-component
+import RemotePicture from 'next-export-optimize-images/remote-picture';
 
 export default async function Home() {
   const res = await fetch('https://picsum.photos/v2/list?&limit=10');
@@ -14,7 +15,7 @@ export default async function Home() {
         <ul className="grid grid-cols-2 gap-6 min-h-[100vh]">
           {images?.map((item: any) => (
             <li className="bg-slate-100 w-[100%] h-0 pt-[100%] relative" key={item.id}>
-              <Image
+              <RemotePicture
                 className="absolute top-0 left-0 w-[100%] h-[100%] object-contain"
                 src={item.download_url}
                 alt=""
