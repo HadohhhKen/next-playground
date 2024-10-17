@@ -1,7 +1,9 @@
-'use client';
 import React from 'react';
-import Image from 'next/image';
-const relativePath = process.env.basePath;
+
+// https://next-export-optimize-images.vercel.app/docs/Features/picture-component
+import Picture from 'next-export-optimize-images/picture';
+
+const basePath = process.env.basePath;
 
 const Header = () => {
   return (
@@ -11,12 +13,12 @@ const Header = () => {
           <ul className="flex gap-2">
             <li>
               <a href="#">
-                <Image src={`${relativePath}/assets/images/common/icon-x.svg`} alt="" width={40} height={40} />
+                <Picture src={`${basePath}/assets/images/common/icon-x.svg`} alt="" width={40} height={40} />
               </a>
             </li>
             <li>
               <a href="#">
-                <Image src={`${relativePath}/assets/images/common/icon-fb.svg`} alt="" width={40} height={40} />
+                <Picture src={`${basePath}/assets/images/common/icon-fb.svg`} alt="" width={40} height={40} />
               </a>
             </li>
           </ul>
