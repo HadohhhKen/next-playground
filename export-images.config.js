@@ -2,8 +2,9 @@
  * @type {import('next-export-optimize-images').Config}
  */
 
+const basePath = process.env.basePath;
 const config = {
-  basePath: process.env.NEXT_PLAYGROUND_TARGET_DIR,
+  basePath,
 };
 
 module.exports = config;
