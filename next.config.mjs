@@ -3,6 +3,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const relativePath = isProd ? '' : '';
 
 const nextConfig = {
+  output: 'export',
   basePath: relativePath,
   assetPrefix: relativePath,
   trailingSlash: true,
