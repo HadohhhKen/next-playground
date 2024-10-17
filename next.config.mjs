@@ -12,5 +12,5 @@ const nextConfig = withExportImages({
     basePath,
   },
 });
-
+console.log('Next.js Configuration:', nextConfig);
 export default nextConfig;
