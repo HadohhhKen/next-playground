@@ -9,16 +9,6 @@ const nextConfig = withExportImages({
   basePath,
   assetPrefix: basePath,
   trailingSlash: true,
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
-        pathname: '/**/*',
-      },
-    ],
-  },
   env: {
     basePath,
   },
