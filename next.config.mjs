@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
+import withExportImages from 'next-export-optimize-images';
 const isProd = process.env.NODE_ENV === 'production';
 const relativePath = isProd ? '' : '';
 
-const nextConfig = {
+const nextConfig = withExportImages({
   output: 'export',
   basePath: relativePath,
   assetPrefix: relativePath,
@@ -20,6 +21,6 @@ const nextConfig = {
   env: {
     basePath: relativePath,
   },
-};
+});
 
 export default nextConfig;
