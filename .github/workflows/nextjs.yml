@@ -29,8 +29,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check directory structure
-        run: ls -la /home/runner/work/next-playground/
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
@@ -69,6 +67,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: npm run build
+      - name: Check out structure after build
+        run: ls -la /home/runner/work/next-playground/next-playground/out
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
