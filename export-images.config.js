@@ -1,15 +1,10 @@
 /**
  * @type {import('next-export-optimize-images').Config}
  */
-//(
-//async () => {
-{
-  //const { basePath } = await import('./next.config.mjs');
-  const config = {
-    basePath: '/next-playground',
-  };
-  console.log('🚀 ~ config:', config);
 
+{
+  const config = {
+    basePath: process.env.BASE_PATH,
+  };
   module.exports = config;
 }
-//)();

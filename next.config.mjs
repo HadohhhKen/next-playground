@@ -2,6 +2,7 @@
 import withExportImages from 'next-export-optimize-images';
 const isDev = process.env.NODE_ENV === 'development';
 const basePath = isDev ? '' : '/next-playground';
+process.env.BASE_PATH = basePath;
 
 const nextConfig = withExportImages({
   output: 'export',
@@ -11,6 +12,5 @@ const nextConfig = withExportImages({
     basePath,
   },
 });
-console.log('Next.js Configuration:', nextConfig);
+
 export default nextConfig;
-export { basePath };
