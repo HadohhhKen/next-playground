@@ -29,6 +29,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Check directory structure
+        run: ls -la /home/runner/work/next-playground/next-playground/out
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
