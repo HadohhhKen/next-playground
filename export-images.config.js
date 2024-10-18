@@ -7,6 +7,7 @@
     const config = {
       basePath,
     };
+    console.log('🚀 ~ config:', config);
 
     module.exports = config;
   }
