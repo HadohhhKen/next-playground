@@ -6,7 +6,6 @@ const basePath = isDev ? '' : '/next-playground';
 const nextConfig = withExportImages({
   output: 'export',
   basePath,
-  // assetPrefix: basePath,
   trailingSlash: true,
   env: {
     basePath,
@@ -14,3 +13,4 @@ const nextConfig = withExportImages({
 });
 console.log('Next.js Configuration:', nextConfig);
 export default nextConfig;
+export { basePath };
