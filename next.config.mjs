@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 import withExportImages from 'next-export-optimize-images';
-const isProd = process.env.NODE_ENV === 'production';
-const basePath = isProd ? '/next-playground' : '';
+const isDev = process.env.NODE_ENV === 'development';
+const basePath = isDev ? '' : '/next-playground';
 
 const nextConfig = withExportImages({
   output: 'export',
