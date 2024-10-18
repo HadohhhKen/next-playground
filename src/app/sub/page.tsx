@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 
 // https://next-export-optimize-images.vercel.app/docs/Features/remote-image-component
 import RemotePicture from 'next-export-optimize-images/remote-picture';
+const basePath = process.env.basePath;
 
 interface Image {
   id: string;
@@ -24,7 +25,7 @@ export default async function Home() {
             <li className="bg-slate-100 w-[100%] h-0 pt-[100%] relative" key={item.id}>
               <RemotePicture
                 className="absolute top-0 left-0 w-[100%] h-[100%] object-contain"
-                src={item.download_url}
+                src={`${basePath}${item.download_url}`}
                 alt=""
                 width={item.width / 10}
                 height={item.height / 10}
